@@ -5,6 +5,7 @@ from twilio import twiml
 from twilio.twiml.messaging_response import MessagingResponse, Message
 from flask import Flask, request, redirect
 from flask_ngrok import run_with_ngrok
+
 openai.api_key = "sk-o608FaXpso8YrUx1KSWdyekG32pwqyhU19YmuEHQ"
 start_sequence = "\nAI:"
 restart_sequence = "\nHuman: "
@@ -49,4 +50,5 @@ if __name__ == "__main__":
         # store the database in the instance folder
         DATABASE=os.path.join(app.instance_path, "flaskr.sqlite"),
     )
-    app.run(debug=True)
+    porteh = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host='0.0.0.0', port=porteh)
