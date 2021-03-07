@@ -50,5 +50,5 @@ if __name__ == "__main__":
         # store the database in the instance folder
         DATABASE=os.path.join(app.instance_path, "flaskr.sqlite"),
     )
-    porteh = int(os.environ.get("PORT", 6969))
+    porteh = int(os.environ.get("PORT", 80))
     app.run(debug=True, host='0.0.0.0', port=porteh)
