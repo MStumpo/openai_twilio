@@ -1,0 +1,4 @@
+openai~=0.4.0
+twilio~=6.53.0
+Flask~=1.1.2
+gunicorn~=20.0.4
