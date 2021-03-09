@@ -4,7 +4,6 @@ from twilio.rest import Client
 from twilio import twiml
 from twilio.twiml.messaging_response import MessagingResponse, Message
 from flask import Flask, request, redirect
-from flask_ngrok import run_with_ngrok
 
 openai.api_key = "sk-o608FaXpso8YrUx1KSWdyekG32pwqyhU19YmuEHQ"
 start_sequence = "\nAI:"
