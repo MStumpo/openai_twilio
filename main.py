@@ -24,7 +24,7 @@ def answer(question):
   return(thing[0].text)
 
 account_sid = "AC94ef7ded7a49a83b7fdbf6cdd5977c77"
-# Your Auth Token from twilio.com/console
+
 auth_token  = "d5829111cb8ba4a2745d177909e83456"
 client = Client(account_sid, auth_token)
 app = Flask(__name__)
@@ -32,8 +32,6 @@ app = Flask(__name__)
 
 @app.route("/sms", methods=['GET', 'POST'])
 def sms_reply():
-    """Respond to incoming calls with a simple text message."""
-    # Start our TwiML response
     resp = MessagingResponse()
     resp.message(answer(request.form['Body']))
 
